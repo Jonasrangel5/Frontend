@@ -1,0 +1,48 @@
+<ion-header></ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/usuario"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: 24px; color: #00274d;">Administración</ion-title>
+  </ion-toolbar>
+
+
+<ion-content class="ion-padding" style="background-color: #f8f9fa;">
+  
+  <!-- Paciente -->
+  <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+    <ion-label position="floating" style="font-size: 18px; color: #00274d;">Paciente</ion-label>
+    <ion-input type="text" placeholder="Nombre del paciente" required style="font-size: 16px; color: #00274d;"></ion-input>
+  </ion-item>
+
+  <!-- Tipo de Lesión -->
+  <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+    <ion-label position="floating" style="font-size: 18px; color: #00274d;">Tipo de Lesión</ion-label>
+    <ion-input type="text" placeholder="Describe la lesión" required style="font-size: 16px; color: #00274d;"></ion-input>
+  </ion-item>
+
+  <!-- Evolución de Lesión -->
+  <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+    <ion-label position="floating" style="font-size: 18px; color: #00274d;">Evolución de Lesión</ion-label>
+    <ion-textarea placeholder="Describe la evolución de la lesión" required style="font-size: 16px; color: #00274d;"></ion-textarea>
+  </ion-item>
+
+  <!-- Subir Video -->
+  <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+    <ion-label style="font-size: 18px; color: #00274d;">Subir Video</ion-label>
+    <ion-button expand="block" style="background-color: #004085; color: white; font-size: 16px; border-radius: 5px; margin-top: 10px;">
+      Seleccionar Archivo
+    </ion-button>
+  </ion-item>
+
+  <!-- Comentarios -->
+  <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+    <ion-label position="floating" style="font-size: 18px; color: #00274d;">Comentarios</ion-label>
+    <ion-textarea placeholder="Añade tus comentarios" style="font-size: 16px; color: #00274d;"></ion-textarea>
+  </ion-item>
+
+  <!-- Botón Enviar -->
+  <ion-button (click)="enviar_datos_administracion()" expand="block" style="background-color: #004085; margin-top: 20px;">Enviar</ion-button>
+      
+
+</ion-content>

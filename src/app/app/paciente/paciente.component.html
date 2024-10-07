@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/usuario"></ion-back-button>
+    </ion-buttons>
+    <ion-title>paciente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: #007bff;">
+  
+  <!-- Formulario del Paciente -->
+  <form [formGroup]="pacienteform" class="form-container" style="margin-top: 20px;">
+    
+    <!-- Tipo de Lesión -->
+    <ion-item lines="none" style="background-color: white; border-radius: 5px; margin-bottom: 15px;">
+      <ion-label position="floating">Tipo de Lesión</ion-label>
+      <ion-input formControlName="type" type="text" placeholder="Describe tu tipo de lesión" required></ion-input>
+    </ion-item>
+
+    <!-- Evolución de la Lesión -->
+    <ion-item lines="none" style="background-color: white; border-radius: 5px; margin-bottom: 15px;">
+      <ion-label position="floating">Evolución de la Lesión</ion-label>
+      <ion-textarea formControlName="evolution" placeholder="Describe la evolución de la lesión" required></ion-textarea>
+    </ion-item>
+
+    <!-- Ejercicios en Casa -->
+    <ion-item lines="none" style="background-color: white; border-radius: 5px; margin-bottom: 15px;">
+      <ion-label position="floating">Ejercicios en Casa</ion-label>
+      <ion-textarea formControlName="exercises" placeholder="Indica los ejercicios a realizar en casa" required></ion-textarea>
+    </ion-item>
+
+    <!-- Comentarios -->
+    <ion-item lines="none" style="background-color: white; border-radius: 5px; margin-bottom: 15px;">
+      <ion-label position="floating">Comentarios</ion-label>
+      <ion-textarea formControlName="comments" placeholder="Escribe comentarios adicionales"></ion-textarea>
+    </ion-item>
+
+    <!-- Botón Enviar -->
+    <ion-button [disabled]="!pacienteform.valid" (click)="enviar_datos_paciente()" expand="block" style="background-color: #004085; margin-top: 20px;">Enviar</ion-button>
+      
+    
+
+  </form>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: 24px; color: #00274d;">Crear Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: #007bff;">
+  
+  <!-- Formulario de Crear Usuario -->
+  <form class="form-container" style="margin-top: 20px;">
+    
+    <!-- Nombre -->
+    <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+      <ion-label position="floating" style="font-size: 18px; color: #00274d;">Nombre</ion-label>
+      <ion-input type="text" placeholder="Ingresa tu nombre" required style="font-size: 16px; color: #00274d;"></ion-input>
+    </ion-item>
+
+    <!-- Apellido -->
+    <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+      <ion-label position="floating" style="font-size: 18px; color: #00274d;">Apellido</ion-label>
+      <ion-input type="text" placeholder="Ingresa tu apellido" required style="font-size: 16px; color: #00274d;"></ion-input>
+    </ion-item>
+
+    <!-- Correo Electrónico -->
+    <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+      <ion-label position="floating" style="font-size: 18px; color: #00274d;">Correo Electrónico</ion-label>
+      <ion-input type="email" placeholder="Ingresa tu correo electrónico" required style="font-size: 16px; color: #00274d;"></ion-input>
+    </ion-item>
+
+    <!-- Contraseña -->
+    <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+      <ion-label position="floating" style="font-size: 18px; color: #00274d;">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingresa tu contraseña" required style="font-size: 16px; color: #00274d;"></ion-input>
+    </ion-item>
+
+    <!-- Botón Crear Usuario Paciente -->
+    <ion-button (click)="crear_usuario_paciente()" expand="block" style="background-color: #004085; margin-top: 20px;">Crear Usuario Paciente</ion-button>
+      
+   
+
+    <!-- Botón Crear Usuario Administración -->
+    <ion-button (click)="crear_usuario_administracion()" expand="block" style="background-color: #004085; margin-top: 20px;">Crear Usuario Administración</ion-button>
+      
+
+  </form>
+</ion-content>

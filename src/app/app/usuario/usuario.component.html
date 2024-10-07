@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: 24px; color: #00274d;">Usuario Fisiocentro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="background-color: #007bff;">
+  
+  <!-- Logo Fisiocentro -->
+  <div style="text-align: center; margin-top: 40px;">
+    <h1 style="color: rgb(0, 123, 255); font-size: 38px; font-weight: bold; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+      Fisiocentro
+    </h1>
+    <p style="color: rgb(0, 123, 255); font-size: 16px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">
+      Tu bienestar es nuestra prioridad
+    </p>
+  </div>
+
+  <form class="form-container" style="margin-top: 20px;" [formGroup]="loginForm">
+    
+    <!-- Nombre -->
+    <ion-item lines="none" style="background-color: white; border-radius: 5px; margin-bottom: 15px;">
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+      <ion-input formControlName="NombreUsuario" type="text" placeholder="Nombre" style="color: #007bff;" required></ion-input>
+    </ion-item>
+
+    <!-- Contraseña -->
+    <ion-item lines="none" style="background-color: white; border-radius: 5px; margin-bottom: 15px;">
+      <ion-icon slot="start" name="lock-closed-outline"></ion-icon>
+      <ion-input formControlName="Contrasena" type="password" placeholder="Contraseña" style="color: #007bff;" required></ion-input>
+    </ion-item>
+
+    <!-- Botón Ingresar Usuario Paciente -->
+    <ion-button [disabled]="!loginForm.valid" (click)="ingresar_usuario_paciente()" expand="block" style="background-color: #004085; margin-top: 20px;">Ingresar Usuario Paciente</ion-button>
+      
+   
+
+    <!-- Botón Crear Ingresar Administración -->
+    <ion-button [disabled]="!loginForm.valid" (click)="ingresar_usuario_administracion()" expand="block" style="background-color: #004085; margin-top: 20px;">Ingresar Usuario Administración</ion-button>
+      
+
+  </form>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+

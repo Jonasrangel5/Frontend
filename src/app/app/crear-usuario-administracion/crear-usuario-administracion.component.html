@@ -1,0 +1,30 @@
+<ion-header></ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/crear_usuario"></ion-back-button>
+    </ion-buttons>
+    <ion-title style="font-size: 24px; color: #00274d;">Crear Usuario Administración</ion-title>
+  </ion-toolbar>
+
+
+<ion-content class="ion-padding" style="background-color: #f8f9fa;">
+  
+  <!-- Formulario de Crear Usuario Administración -->
+  <form class="form-container" style="margin-top: 20px;">
+    
+    <!-- Fisioterapeuta o Administrador -->
+    <ion-item lines="none" style="background-color: white; border-radius: 10px; margin-bottom: 15px;">
+      <ion-label position="floating" style="font-size: 18px; color: #00274d;">Seleccione el Rol</ion-label>
+      <ion-select placeholder="Seleccionar Rol" style="font-size: 16px; color: #00274d;">
+        <ion-select-option value="fisioterapeuta" style="font-size: 16px; color: #00274d;">Fisioterapeuta</ion-select-option>
+        <ion-select-option value="administrador" style="font-size: 16px; color: #00274d;">Administrador</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <!-- Botón Crear -->
+    <ion-button expand="block" style="background-color: #004085; color: white; margin-top: 40px; border-radius: 10px; font-size: 18px;">
+      Crear
+    </ion-button>
+
+  </form>
+</ion-content>
